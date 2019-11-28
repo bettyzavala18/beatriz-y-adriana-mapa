@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AUTOS</title>
+    <header class="site-header">
+            <div class="contenedor contenido-header">
+                <div class="barra">
+                    <a href="/">
+                        <img src="img/ford.svg" alt="Logotipo de Bienes Raices">
+                    </a>
+                    <div class="mobile-menu">
+                        <a href="#navegacion">
+                            <img src="img/barras.svg" alt="Icono Menu">
+                        </a>
+                       
+                    </div>
+    
+                    <nav id="navegacion" class="navegacion">
+                        <a href="nosotros.html">Nosotros</a>
+                        <a href="anuncios.html">Anuncios</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="buscanos.html">Buscanos</a>
+                    </nav>
+                </div>
+            </div> <!-- contenedor -->
+        </header>
+    
+        <main class="mapas">
+            <h1 class="fw-300 centrar-texto">BUSCANOS</h1>
+                <img src="img/car.png" alt="Anuncio casa en el lago">
+            
+           <a href="map.html" class="boton boton-azul d-block">Ver Ubicación</a>
+           
+             </div><!--contenido anuncio-->
+                </div> <!--anuncio-->
+            
+        </main>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+   
+  <script type="text/javascript">
+   function load() {
+      if (GBrowserIsCompatible()) {
+        
+      
+	
+			
+		function addtag(point, address) {
+		var marker = new GMarker(point);
+		GEvent.addListener(marker, "click", function() { marker.openInfoWindowHtml(address); } );
+		return marker;
+		}
+		
+		
+      }
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+    <div id="map" align="center" style="width: 500px; height: 500px"></div>
+    <hr/>
+    
+</head>
+<body>
+
+    
+
+   
+</body>
+</html>

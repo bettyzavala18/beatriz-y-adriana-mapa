@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <center><script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyAIs6FmMkrkFPujW_jGAOrZIKNmiTMzWLw"</center>
+        type="text/javascript"></script>
+      <script type="text/javascript">
+       function load() {
+          if (GBrowserIsCompatible()) {
+            var map = new GMap2(document.getElementById("map"));
+              //donde se tienen que cambiar los controles que al usuario le apareceran cuando se visualice;
+            map.addControl(new GMapTypeControl());//muestra mapa, satelite, e hibrido...
+            map.addControl(new GLargeMapControl());//controles de movimiento;
+            map.addControl(new GScaleControl());//añade controles de zoom;
+            map.addControl(new GOverviewMapControl());//añade una pequeña sobrevista;
+            
+            map.setCenter(new GLatLng(19.811889,-90.529918), 5);// donde tengo que cambiar las cordenadas xd; latitud y longitud.
+            //el 5 indica el zoom inicial del mapa
+          
+            map.setMapType(G_HYBRID_TYPE);
+                
+            function addtag(point, address) {
+            var marker = new GMarker(point);
+            GEvent.addListener(marker, "click", function() { marker.openInfoWindowHtml(address); } );
+            return marker;
+            }
+            
+            var point = new GLatLng(19.811889,-90.529918);
+            var address = '<b>ford campeche</b><br/><i>Centro de ford campeche</i><br /><a href="https://goo.gl/maps/fepPoRMZY9HM5nRFA">Web del Centro de ford campeche</a>';
+            var marker = addtag(point, address);
+            
+            map.addOverlay(marker);	
+              
+          }
+        }
+    
+        //]]>
+        </script>
+      </head>
+      <body onload="load()" onunload="GUnload()">
+        <div id="map" align="center" style="width: 1000px; height:600px"></div>
+        <hr/>
+        <a>Elaborado &nbsp;</a><a></a><a>&nbsp;por: beatriz y adriana</a>
+        <p><a>sucursal de ford de campeche </a></p>
+        <p><p/>
+</body>
+</html>
